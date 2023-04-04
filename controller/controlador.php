@@ -2,6 +2,7 @@
 
 require_once ("../model/Usuario.php");
 require_once("../model/UsuarioFunctions.php");
+require_once("../controller/aliquota.php");
 
 
 
@@ -12,9 +13,9 @@ $usuario->setNome($_POST['txtnome']);
 $usuario->setCpf($_POST['txtcpf']);
 $usuario->setRendimento($_POST['txtrendimento']);
 
-echo (" oi ". $usuario->getNome());
 
-echo (UsuarioFunctions::apresenta($usuario));
+
+echo (Aliquota::calcular($usuario));
 
 
 /*<form name="formAliquota" action="controller/controlador.php" method="POST">
