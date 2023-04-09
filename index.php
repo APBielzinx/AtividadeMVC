@@ -18,13 +18,19 @@
     
         <form action="controller/controlador.php" method="post">
 
-        <input type="text" name="txtnome" id="txtnome"  placeholder="Nome">
-        <input type="text" name="txtcpf" id="txtcpf" placeholder="CPF">
+        <input type="text" name="txtnome" id="txtnome"  placeholder="Nome" required>
+        <input type="text" name="txtcpf" id="txtcpf" placeholder="CPF" required>
 
-        <input type="text" name="txtrendimento" id="txtrendimento" placeholder="rendimento anual">
+        <input type="text" name="txtrendimento" id="txtrendimento" placeholder="rendimento anual" onclick="informacao()" required>
         <button type="submit">Enviar</button>
 
     </form>
-    
+    <script>
+
+        function informacao(){
+            alert("Utilize um ponto para marcar os centavos mesmo que seja 0")
+        }
+
+    </script>
 </body>
 </html>

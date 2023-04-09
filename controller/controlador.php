@@ -11,11 +11,39 @@ $usuario = new Usuario();
 
 $usuario->setNome($_POST['txtnome']);
 $usuario->setCpf($_POST['txtcpf']);
-$usuario->setRendimento($_POST['txtrendimento']);
+
+if(strpos($_POST['txtrendimento'], '.')){
+
+    $usuario->setRendimento($_POST['txtrendimento']);
+    echo (Aliquota::calcular($usuario));
+
+}else{
+
+   echo("<script>
+    
+   var resultado = confirm('é necessario inserir o ponto dos centavos');
+
+   if(resultado == true){
+      
+
+    window.location.href = 'http://localhost/AtividadeMVC/index.php';
+
+      
+   }else{
+   
+
+    window.location.href = 'http://localhost/AtividadeMVC/index.php';
+
+   
+   }
+
+    </script>");
+
+ 
+
+}
 
 
-
-echo (Aliquota::calcular($usuario));
 
 
 /*<form name="formAliquota" action="controller/controlador.php" method="POST">
