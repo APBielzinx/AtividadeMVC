@@ -31,7 +31,18 @@
         $aliquota = 15;
         $valorPagar = $usuario->getRendimento() * 0.15; 
 
-      }
+      } else if ($usuario->getRendimento() >= 45012.61 && $usuario->getRendimento() < 55976.16) {
+
+        $aliquota = 22.5;
+        $valorPagar = $usuario->getRendimento() * 0.225
+
+      }else if($usuario->getRendimento() > 55976.16 ){
+
+        $aliquota = 27.5;
+        $valorPagar = $usuario->getRendimento() * 0.275
+
+      } 
+
 
 
 
