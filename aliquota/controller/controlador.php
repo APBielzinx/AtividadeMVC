@@ -1,6 +1,7 @@
 <?php
 
 require_once ("../model/Usuario.php");
+require_once("./validaCpf.php");
 
 
 
@@ -9,7 +10,14 @@ require_once ("../model/Usuario.php");
 $usuario = new Usuario();
 
 $usuario->setNome($_POST['txtnome']);
-$usuario->setCpf($_POST['txtcpf']);
+
+if(validaCPF($_POST['txtcpf']) == true){
+    $usuario->setCpf($_POST['txtcpf']);
+}else if(validaCPF($_POST['txtcpf']) == false){
+    $usuario->setCpf("CPF INVALIDO");
+  
+}
+
 
 if(strpos($_POST['txtrendimento'], '.')){
 
@@ -31,7 +39,7 @@ if(strpos($_POST['txtrendimento'], '.')){
    }else{
    
 
-    window.location.href = 'http://localhost/AtividadeMVC/index.php';
+    window.location.href = 'http://localhost/AtividadeMVC/aliquota/index.php';
 
    
    }

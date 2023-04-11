@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body  bgcolor="#001E5A">
+<body onload="informacao()">
     
       
             <h1>Calcule sua alíquota</h1>
@@ -24,21 +24,25 @@
        <input type="text" name="txtcpf" id="txtcpf" placeholder="CPF" required>
        </div>
        <div class="area-input">
-       <input type="text" name="txtrendimento" id="txtrendimento" placeholder="rendimento anual" onclick="informacao()" required>
+       <input type="text" name="txtrendimento" id="txtrendimento" placeholder="rendimento anual"  required>
        </div>
        
 
 
    
-        <button type="submit">Enviar</button>
+        <button  onclick="valida()" type="submit">Enviar</button>
 
     </form>
-    <script>
+   
+        <script src="../js/validaCpf.js"></script>
+        <script>
 
-        function informacao(){
-            alert("Utilize um ponto para marcar os centavos mesmo que seja 0")
-        }
+function informacao(){
+    alert("Utilize um ponto para marcar os centavos mesmo que seja 0")
+}
 
-    </script>
+</script>
+
+
 </body>
 </html>
