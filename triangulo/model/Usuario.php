@@ -1,9 +1,9 @@
 <?php
 
 class Usuario {
-    private ladoA;
-    private ladoB;
-    private ladoC;
+    private $ladoA;
+    private $ladoB;
+    private $ladoC;
 
 
     public function getLadoA() {

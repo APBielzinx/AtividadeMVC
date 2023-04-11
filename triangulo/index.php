@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <form method ="GET" action ="controller/controlador.php">
+    <form method ="POST" action ="controller/controlador.php">
         <h1>Descubra qual triângulo é</h1>
         <div  class="area-input"> 
             <input type =" text " name ="ladoA" placeholder="Lado 1">
