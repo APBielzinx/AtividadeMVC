@@ -1,8 +1,7 @@
 <?php
 
 require_once ("../model/Usuario.php");
-require_once("../model/UsuarioFunctions.php");
-require_once("../controller/aliquota.php");
+
 
 
 
@@ -15,7 +14,7 @@ $usuario->setCpf($_POST['txtcpf']);
 if(strpos($_POST['txtrendimento'], '.')){
 
     $usuario->setRendimento($_POST['txtrendimento']);
-    echo (Aliquota::calcular($usuario));
+    echo ($usuario->CalculaRendimento($usuario));
 
 }else{
 
@@ -26,7 +25,7 @@ if(strpos($_POST['txtrendimento'], '.')){
    if(resultado == true){
       
 
-    window.location.href = 'http://localhost/AtividadeMVC/index.php';
+    window.location.href = 'http://localhost/AtividadeMVC/aliquota/index.php';
 
       
    }else{

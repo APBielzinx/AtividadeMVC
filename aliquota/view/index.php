@@ -16,12 +16,20 @@
            
   
     
-        <form action="controller/controlador.php" method="post">
+        <form action="../controller/controlador.php" method="post">
+       <div class="area-input">
+       <input type="text" name="txtnome" id="txtnome"  placeholder="Nome" required>
+       </div>
+       <div class="area-input">
+       <input type="text" name="txtcpf" id="txtcpf" placeholder="CPF" required>
+       </div>
+       <div class="area-input">
+       <input type="text" name="txtrendimento" id="txtrendimento" placeholder="rendimento anual" onclick="informacao()" required>
+       </div>
+       
 
-        <input type="text" name="txtnome" id="txtnome"  placeholder="Nome" required>
-        <input type="text" name="txtcpf" id="txtcpf" placeholder="CPF" required>
 
-        <input type="text" name="txtrendimento" id="txtrendimento" placeholder="rendimento anual" onclick="informacao()" required>
+   
         <button type="submit">Enviar</button>
 
     </form>
