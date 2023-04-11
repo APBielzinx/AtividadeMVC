@@ -1,9 +1,6 @@
 <?php
 
 require_once("../model/Usuario.php");
-require_once("Triangulo.php");
-
-
 
 
 $usuario = new Usuario();
@@ -32,7 +29,7 @@ $usuario->setLadoC($_POST['ladoC']);
 
 <h1><?php
 
-Triangulo::VerTriangulo($usuario);
+echo($usuario->VerTriangulo($usuario));
 
 
 

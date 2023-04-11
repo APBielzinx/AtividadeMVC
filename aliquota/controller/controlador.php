@@ -45,27 +45,36 @@ if(strpos($_POST['txtrendimento'], '.')){
 
 
 
-/*<form name="formAliquota" action="controller/controlador.php" method="POST">
 
-<div class="area-input">
-    <input type="text" name="txtnome" id="txtnome"  placeholder="Nome">
-</div>
-
-<div class="area-input">
-   
-    <input type="text" name="txtcpf" id="txtcpf" placeholder="CPF">
-</div>
-
-<div class="area-input">
-    
-    <input type="text" name="txtrendimento" id="txtrendimento" placeholder="rendimento anual">
-   
-</div>
-<button type="submit">Enviar</button>
-
-</form>*/
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alíquota</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+   <h1>
+       <?php
+       
+       echo("Nome: ".$usuario->getNome());
+       echo("<br>CPF: ".$usuario->getCpf());
+       echo("<br>Rendimento: ".$usuario->getRendimento());
+        echo("<br>Aliquota: ".number_format($usuario->getAliquota(), 2, ',', ' '));
+        echo("<br>Valor a pagar: ".number_format($usuario->getValorPagar(), 2, ',', ' '));
+       ?>
+   </h1>   
+
+
+        
+</body>
+</html>
 
 
 
