@@ -41,6 +41,13 @@ function informacao(){
     alert("Utilize um ponto para marcar os centavos mesmo que seja 0")
 }
 
+document.getElementById("txtnome").onkeypress = function(e) {
+         var chr = String.fromCharCode(e.which);
+         if ("qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM".indexOf(chr) < 0)
+           console.log("a")
+         return false;
+       };
+
 </script>
 
 
